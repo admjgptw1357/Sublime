@@ -1,0 +1,9 @@
+{
+	"shell" :true,
+	"file_regex": "(.*\\.tex?)\\s\\(([0-9]+)\\,([0-9]+)\\)\\:\\s(...*?)$", 
+	"selector":"text.tex.latex",
+	"encoding": "cp932",
+	"cmd":["platex","$file_name","platex  -interaction=nonstopmode -kanji=utf8 -guess-input-enc","&","dvipdfmx","$file_base_name.dvi","&",
+	"C:/Program Files (x86)/SumatraPDF/SumatraPDF","-reuse-instance","./$file_base_name.pdf", "&",
+	"del","$file_base_name.dvi","&","del","$file_base_name.log","&","del","$file_base_name.aux"]
+}
