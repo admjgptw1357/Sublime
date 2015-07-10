@@ -1,0 +1,11 @@
+{
+	"shell" :true,
+	"file_regex": "(.*\\.tex?)\\s\\(([0-9]+)\\,([0-9]+)\\)\\:\\s(...*?)$", 
+	"selector":"text.tex.latex",
+	"encoding": "cp932",
+	"cmd":["pdfclose" , "--file" , "$file_base_name.pdf" ,"&",
+	"platex","$file_name","platex  -interaction=nonstopmode -kanji=utf8 -guess-input-enc","&",
+	"dvipdfmx","$file_base_name.dvi","&",
+	"pdfopen","--file","./$file_base_name.pdf", "&",
+	"del","$file_base_name.dvi","&","del","$file_base_name.log","&","del","$file_base_name.aux"]
+}
