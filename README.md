@@ -1,2 +1,2 @@
 # Sublime
-sublime textの
+sublime textの適当な置き場
