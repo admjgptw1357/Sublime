@@ -1,0 +1,6 @@
+{
+	"encoding": "cp932", 
+	"cmd": ["tsc","$file","--target","ES5"],
+	"file_regex": "(.*\\.ts?)\\s\\(([0-9]+)\\,([0-9]+)\\)\\:\\s(...*?)$", 
+	"selector":"source.ts"
+}
